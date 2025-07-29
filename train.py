@@ -7,7 +7,7 @@ import torch.optim as optim
 from tqdm import tqdm
 
 
-device = torch.device("mps" if torch.mps.is_available else "cpu")
+device = torch.device("mps" if torch.backend.mps.is_available else "cpu")
 batch_size = 32
 learning_rate = 3e-4
 num_classes = 10  
